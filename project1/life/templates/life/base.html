@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            Base  
+        </title>
+    </head>
+    <style>
+        .highlight{
+        background-color: yellow;
+    }
+    #messageHighlighter{
+        font-weight: bolder;
+        font-size: large;
+        font-family: monospace;
+        color: blue;
+    }
+    </style>
+    <body class="highlight">
+        <h1>
+            This is Life and it does some calculations. Hahahaha....
+        </h1>
+        {% block content %}
+        {% endblock %}
+        <h3>To visit home page click on this <a href="{% url 'homePage' %}">link</a> </h3>
+    </body>
+</html>

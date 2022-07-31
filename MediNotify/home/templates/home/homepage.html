@@ -1,0 +1,13 @@
+{% extends 'home/navigation.html' %}
+{% block content %}
+        {% if user.is_authenticated %}
+            {% block onclickContent %}
+            {% endblock %}
+        {% else %}
+            <h1>Here at MediNotify we will notify your closemates whenever you take your Medicines.</h1>
+            <br>
+            <br>
+            <h3>Existing User? <a href="{% url 'login' %}">Login</a></h3><br>
+            <h3>New user? No problem, Please <a href="{% url 'home:signup'%}">Register</a></h3>       
+        {% endif %}
+{% endblock %}

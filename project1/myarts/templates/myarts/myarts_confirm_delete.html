@@ -1,0 +1,10 @@
+{% extends "base_bootstrap.html" %}
+{% block content %}
+<h1>Delete Article</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>Do you want to delete the article with name: {{article}}?</p>
+        <input type="submit" value="Submit"/>
+        <input type="submit" onclick="window.location='{% url 'myarts:list'%}' ; return False;" value="Cancel"/>
+    </form>
+{% endblock %}

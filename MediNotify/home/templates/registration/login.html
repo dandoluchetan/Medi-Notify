@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        {% load crispy_forms_tags %}
+        {% if form.errors %}
+            <p>OOPS!!!Your Username and password did not match</p>
+        {% endif %}
+        <form class="myLoginForm" action="{% url 'login' %}" method="post">
+            {%csrf_token%}
+            {{form|crispy}}
+            <input type="submit" value="Login" class="btn btn-success">
+        </form>
+{% endblock %}

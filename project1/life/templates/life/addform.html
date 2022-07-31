@@ -1,0 +1,17 @@
+{% extends "life/base.html" %}
+
+{% block content %}
+<p id="messageHighlighter">
+{% if message %}
+        {{message}}
+{% endif %}
+</p>
+
+<form method="POST">
+    <p>Enter Number 1:</p><input type="number" size="40" name="x"><br>
+    <p>Enter Number 2:</p><input type="number" size="40" name="y"><br>
+    <input type="submit">
+    {% csrf_token %}
+    
+</form>
+{% endblock %}

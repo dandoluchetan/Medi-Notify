@@ -1,0 +1,29 @@
+{% extends "base_bootstrap.html" %}
+
+{% block content %}
+    <h1>Auto List</h1>
+    {% if auto_list %}
+        <ol>
+            {% for a in auto_list %}
+            <li>
+                {{a.nickname}} ({{a.make_id}}) (<a href="{% url 'autos:auto-update' a.id %}">Update</a> | 
+                <a href="{% url 'autos:auto-delete' a.id %}">Delete</a>)
+                <br>
+                {{a.comments}} (mileage: {{a.mileage}} miles )
+            </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>No Autos. Pleas add auto</p>
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="{% url 'autos:make-list' %}">View Makes</a>({{make_count}}) 
+    <br>
+    <a href="{% url 'autos:auto-create' %}">Add Auto</a>| <a href="{% url 'autos:make-create' %}">Add Make</a>
+{% endblock %}

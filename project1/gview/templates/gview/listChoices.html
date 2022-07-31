@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>choices</title>
+    </head>
+    <body>
+        <p>
+            <strong>{{question}}:</strong>
+        </p>
+        <form method="POST">
+            {% for c in object_list %}
+            <input type="radio" name="id" value="{{c.id}}">{{c.c_text}}<br>
+            {% endfor %}
+            {% csrf_token %}
+            <input type="submit" value="vote">
+        </form>  
+        <br>
+        <br>
+        <br>
+        {% if message %}
+        {{message}}
+        {% endif %}
+    </body>
+</html>

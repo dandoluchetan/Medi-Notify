@@ -1,0 +1,11 @@
+{% extends 'home/homepage.html' %}
+
+
+{% block onclickContent %}
+    {% load crispy_forms_tags %}
+    {% if medicines_list %}
+        <p>hey ;)</p>
+    {% else %}
+    <p>Sorry, No Medicines. Please <a href="{% url 'home:addYourMedicine' %}">add</a> your medicine here.</p>
+    {% endif %}
+{% endblock %}

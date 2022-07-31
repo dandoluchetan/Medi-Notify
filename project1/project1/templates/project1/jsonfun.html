@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hi</title>
+    </head>
+    <body>
+        <p id="back"> This text will vanish in 2 secs</p>
+        <a href="jsonfun/">B party</a>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script type="text/javascript">
+             console.log('hi this is js');
+            $(document).ready(function(){
+                    $.getJSON('jsonfun/',function(data){
+                    $("#back").html(data.first);
+                    console.log(data);
+                });
+                
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Questions</title>
+    </head>
+    <body>
+        <h1>
+            This is the Gview Page. Click on the Question to answer.
+        </h2>
+        <ol>
+            {% for q in object_list %}
+            <li>
+                <a href="{% url 'viewChoices' q.id %}">{{q.q_text}}</a>
+            </li>
+            {% endfor %}
+        </ol>   
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'home/homepage.html' %}
+
+
+{% block onclickContent %}
+<h1>Delete medicine</h1>
+
+<p>Are you sure you want to delete the Medicine: {{ medicine }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete.">
+  <br>
+  <input type="submit" onclick="window.location='{% url 'home:yourMedicines' %}' ; return False;" value="Cancel"/>
+</form>
+{% endblock %}

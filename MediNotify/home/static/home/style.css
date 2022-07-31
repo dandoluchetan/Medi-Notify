@@ -1,0 +1,30 @@
+.myLoginForm {
+    min-width: 500px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem
+}
+.myRegistrationForm{
+    min-width: 500px;
+    position: absolute;
+    text-align: center;
+    text-decoration: solid;
+    text-transform: uppercase;
+    font-weight: bold;
+    top: 8%;
+    left: 31%;
+    /* transform: translate(-50%, -50%); */
+    font-size: 1rem
+}
+.place-holder-center::placeholder{
+    text-align: center;
+}
+body{
+    background: white url("images/background.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+

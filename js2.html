@@ -1,0 +1,22 @@
+<html>
+    <head>
+    <title>
+        jquery
+    </title>
+    </head>
+    <body>
+        <p>
+            <a href="js.html" onclick="change(); return false;"><span id="person">Chetan</span></a>
+            <script type="text/javascript">
+                function change(){
+                    st=document.getElementById('person').innerHTML;
+                    
+                    document.getElementById('person').innerHTML='Karthikeya';
+                }
+            </script>
+            <p>
+                Did you notice the change....?
+            </p>
+        </p>
+    </body>
+</html>

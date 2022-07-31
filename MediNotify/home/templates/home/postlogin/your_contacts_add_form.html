@@ -1,0 +1,31 @@
+{% extends 'home/homepage.html' %}
+
+
+{% block onclickContent %}
+    {% load crispy_forms_tags %}
+    <h2 style="text-align:center;">
+        Add your Contact!
+    </h2>
+    <form method="post" style="text-align:center;">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-0">
+                {{ form.contact_name|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-6 mb-0">
+                {{ form.contact_phone_number|as_crispy_field }}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6 mb-0">
+                {{ form.relation_type|as_crispy_field }}
+            </div>
+            <div class="form-group col-md-6 mb-0">
+                {{ form.contact_email|as_crispy_field }}
+            </div>
+        </div>
+        <div class="form-row">
+            <button style="text-align:center;" type="submit" class="btn btn-success">Save</button>
+        </div>
+    </form>
+{% endblock %}
